@@ -1,8 +1,69 @@
+G = 'Gilroy', sans-serif
+GB = 'GilroyBold', sans-serif
+GM = 'GilroyMedium', sans-serif
+GL = 'GilroyLight', sans-serif
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy.eot');
+	src: url('../fonts/Gilroy.eot') format('embedded-opentype'),
+		 url('../fonts/Gilroy.woff2') format('woff2'),
+		 url('../fonts/Gilroy.woff') format('woff'),
+		 url('../fonts/Gilroy.ttf') format('truetype'),
+		 url('../fonts/Gilroy.svg#Gilroy') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GilroyBold';
+	src: url('../fonts/GilroyBold.eot');
+	src: url('../fonts/GilroyBold.eot') format('embedded-opentype'),
+		 url('../fonts/GilroyBold.woff2') format('woff2'),
+		 url('../fonts/GilroyBold.woff') format('woff'),
+		 url('../fonts/GilroyBold.ttf') format('truetype'),
+		 url('../fonts/GilroyBold.svg#GilroyBold') format('svg');
+	font-display: fallback;
+	font-weight: bold
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GilroyMedium';
+	src: url('../fonts/GilroyMedium.eot');
+	src: url('../fonts/GilroyMedium.eot') format('embedded-opentype'),
+		 url('../fonts/GilroyMedium.woff2') format('woff2'),
+		 url('../fonts/GilroyMedium.woff') format('woff'),
+		 url('../fonts/GilroyMedium.ttf') format('truetype'),
+		 url('../fonts/GilroyMedium.svg#GilroyMedium') format('svg');
+	font-display: fallback;
+	font-weight: 700
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GilroyLight';
+	src: url('../fonts/GilroyLight.eot');
+	src: url('../fonts/GilroyLight.eot') format('embedded-opentype'),
+		 url('../fonts/GilroyLight.woff2') format('woff2'),
+		 url('../fonts/GilroyLight.woff') format('woff'),
+		 url('../fonts/GilroyLight.ttf') format('truetype'),
+		 url('../fonts/GilroyLight.svg#GilroyLight') format('svg');
+	font-display: fallback;
+	font-weight: 100
+	font-style: normal;
+}
+
 *
 	margin 0
 	padding 0
 	outline none
-
+body
+	font-family: G
+	color #fff
+	font-size: 16px
+	line-height: 1.4em;
 a
 	color: #fefefe
 	&:focus
@@ -51,3 +112,44 @@ footer
 		right 0
 		bottom 0
 		cursor pointer
+.general-title
+	font-size: 36px
+	font-family: GB
+	width 100%
+	max-width 760px
+	max-width: 780px;
+	margin-bottom: 30px;
+	&-black
+		color #303036
+.button
+	display: block;
+	width 100%
+	max-width 260px
+	text-align: center
+	padding: 9px 15px;
+	background-color: #3898EC;
+	color: #fff
+	border: 1px solid #3898EC;
+	line-height: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 5px
+	font-family: GM
+	margin 0 auto
+	transition: all .3s ease
+	&:focus
+		text-decoration: none
+		background-color: #3898EC;
+		color:#fff
+	&:hover
+		background-color: #fff
+		color: #3898EC;
+		border-color: #3898EC;
+
+@import '0.header.styl'
+@import 'main/1.main.styl'
+@import 'main/2.advants.styl'
+@import 'main/3.text-revs.styl'
+@import 'main/4.video-revs.styl'
+@import 'main/5.footer.styl'
+@import 'main/6.medias.styl'
