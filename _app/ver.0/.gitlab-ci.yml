@@ -1,0 +1,33 @@
+stages:
+  - deploy
+
+deploy dev:
+  stage: deploy
+  script:
+    - sudo -u d.sergachev /usr/bin/git -C /var/www/sd/investpartners checkout developer
+    - sudo -u d.sergachev /usr/bin/git -C /var/www/sd/investpartners pull origin developer
+    - sudo -u d.sergachev /usr/bin/composer install -d /var/www/sd/investpartners
+  tags:
+    - dev
+  only:
+    refs:
+      - developer
+  variables:
+    GIT_STRATEGY: none
+
+deploy prod:
+  stage: deploy
+  when: manual
+  script:
+    - sudo -u advpartners.pro /usr/bin/git -C /var/www/advpartners.pro/${CI_PROJECT_NAME} checkout master
+    - sudo -u advpartners.pro /usr/bin/git -C /var/www/advpartners.pro/${CI_PROJECT_NAME} pull origin master
+    - sudo -u advpartners.pro /usr/local/bin/composer install -d /var/www/advpartners.pro/${CI_PROJECT_NAME}
+  tags:
+    - prod
+    - advpartners
+  only:
+    refs:
+      - master
+  variables:
+    GIT_STRATEGY: none
+
