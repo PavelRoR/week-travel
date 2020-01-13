@@ -55,6 +55,9 @@ GL = 'GilroyLight', sans-serif
 	font-style: normal;
 }
 
+@import '../_css/bootstrap.min.css'
+@import '../_css/jquery.fancybox.min.css'
+
 *
 	margin 0
 	padding 0
@@ -122,9 +125,9 @@ footer
 	&-black
 		color #303036
 .button
-	display: block;
-	width 100%
-	max-width 260px
+	display: inline-block;
+	// width 100%
+	// max-width 260px
 	text-align: center
 	padding: 9px 15px;
 	background-color: #3898EC;
@@ -145,7 +148,8 @@ footer
 		background-color: #fff
 		color: #3898EC;
 		border-color: #3898EC;
-
+	&-wrapper
+		text-align: center
 @import '0.header.styl'
 @import 'main/1.main.styl'
 @import 'main/2.advants.styl'

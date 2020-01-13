@@ -1,0 +1,21 @@
+section#revs
+	.container
+		+gt('','Отзывы счастливых участников')
+		#text-revs.carousel.slide(data-ride="carousel" data-interval="false")
+			.carousel-inner(role="listbox")
+				.item.active
+					a( href="img/revs/text-1.jpg" data-fancybox="revs")
+						img.revs-img( src="img/revs/text-1.jpg" alt="Отзыв 1")
+				each n in [2,3,4]
+					.item
+						a( href="img/revs/text-"+n+".jpg" data-fancybox="revs")
+							img.revs-img( src="img/revs/text-"+n+".jpg" alt="Отзыв "+n)
+			ol.carousel-indicators
+				li.active( data-target="#text-revs" data-slide-to="0")
+				each l in [1,2,3,]
+					li( data-target="#text-revs" data-slide-to=l)
+			.controls
+				a( class="left carousel-control" href="#text-revs" role="button" data-slide="prev") «
+				a( class="right carousel-control" href="#text-revs" role="button" data-slide="next") »
+			.clearfix
+		+b('',href, 'Зарегистрироваться')
