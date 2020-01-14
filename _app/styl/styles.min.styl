@@ -71,8 +71,11 @@ a
 	color: #fefefe
 	&:focus
 		outline: 0
+		color #fff
+		text-decoration: none
 	&:hover
 		text-decoration none
+		color #ffca03
 h1,h2,h3,h4,h5,h6
 	font-weight normal
 	margin 0
@@ -121,7 +124,7 @@ footer
 	width 100%
 	max-width 760px
 	max-width: 780px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	&-black
 		color #303036
 .button
@@ -130,9 +133,9 @@ footer
 	// max-width 260px
 	text-align: center
 	padding: 9px 15px;
-	background-color: #3898EC;
-	color: #fff
-	border: 1px solid #3898EC;
+	background-color: #FFCB05
+	color: #303036
+	border: 1px solid #FFCB05
 	line-height: inherit;
 	text-decoration: none;
 	cursor: pointer;
@@ -142,18 +145,29 @@ footer
 	transition: all .3s ease
 	&:focus
 		text-decoration: none
-		background-color: #3898EC;
-		color:#fff
+		background-color: #FFCB05
+		color:#303036
 	&:hover
-		background-color: #fff
-		color: #3898EC;
+		background-color: #303036
+		color: #FFCB05
+		border-color: #FFCB05
+		color #fff
+	&-2
+		background-color: #3898EC;
 		border-color: #3898EC;
+		color #fff
+		&:focus
+			background-color: #3898EC;
+			color:#fff
+		&:hover
+			background-color: #303036
+			color: #fff
+			border-color: #303036
 	&-wrapper
 		text-align: center
 @import '0.header.styl'
 @import 'main/1.main.styl'
 @import 'main/2.advants.styl'
-@import 'main/3.text-revs.styl'
-@import 'main/4.video-revs.styl'
-@import 'main/5.footer.styl'
-@import 'main/6.medias.styl'
+@import 'main/3.revs.styl'
+@import 'main/4.footer.styl'
+@import 'main/5.medias.styl'

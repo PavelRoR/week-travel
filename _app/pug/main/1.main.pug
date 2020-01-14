@@ -1,7 +1,8 @@
 section#main
 	.container
+		include ../0.header.pug
 		h1.main-title=head_title
-		h2.main-subtitle=head_subtitle
+		h2.main-subtitle=head_description
 		.video-wrapper.video-wrapper-main
 			iframe(src="https://www.youtube.com/embed/1O3aYjwFJJY?mute=1&autoplay=1" allowfullscreen)
 		+b('','#!','Записаться на презентацию')

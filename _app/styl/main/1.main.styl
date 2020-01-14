@@ -1,0 +1,39 @@
+#main
+	padding: 0 0 60px
+	text-align: center
+	background-color: #009DD2
+	background-image url(../img/backs/main-bg.jpg)
+	background-repeat no-repeat
+	background-position: 50% 0%
+	background-size cover
+	position relative
+	.container
+		position relative
+		z-index 9
+	&:before
+		content ''
+		display block
+		position: absolute;
+		left: -105%;
+		top: -80%;
+		right: auto;
+		bottom: auto;
+		z-index: 0
+		width: 1800px;
+		height: 1800px;
+		background-image: url("../img/backs/main-decor.svg");
+		background-position: 50% 50%;
+		background-size: contain;
+		background-repeat: no-repeat;
+.main-title
+	font-size: 48px;
+	font-family: GB
+	line-height: 1.1em;
+.main-subtitle
+	margin 20px 0 35px
+	font-size: 24px;
+	font-family: GM
+	line-height: 1.2em;
+.video-wrapper-main
+	max-width 560px
+	margin: 0 auto 40px

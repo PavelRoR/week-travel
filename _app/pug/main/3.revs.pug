@@ -1,6 +1,6 @@
 section#revs
 	.container
-		+gt('','Отзывы счастливых участников')
+		+gt('general-title-black','Отзывы счастливых участников')
 		#text-revs.carousel.slide(data-ride="carousel" data-interval="false")
 			.carousel-inner(role="listbox")
 				.item.active
@@ -15,7 +15,7 @@ section#revs
 				each l in [1,2,3,]
 					li( data-target="#text-revs" data-slide-to=l)
 			.controls
-				a( class="left carousel-control" href="#text-revs" role="button" data-slide="prev") «
-				a( class="right carousel-control" href="#text-revs" role="button" data-slide="next") »
+				a( class="left carousel-control" href="#text-revs" role="button" data-slide="prev")
+				a( class="right carousel-control" href="#text-revs" role="button" data-slide="next")
 			.clearfix
-		+b('',href, 'Зарегистрироваться')
+		+b('button-2',href, 'Зарегистрироваться')
